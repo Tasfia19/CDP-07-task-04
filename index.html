@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Data Display</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>User Data</h1>
+        <button onclick="fetchDataPromise().then(displayData)">Fetch Data (Promise)</button>
+        <button onclick="fetchDataCallback(displayData)">Fetch Data (Callback)</button>
+        <button onclick="fetchData().then(displayData)">Fetch Data (Async & Await)</button>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+          <tbody id="container"></tbody>
+        </table>
+      </div>
+  <script src="script.js"></script>
+</body>
+</html>
